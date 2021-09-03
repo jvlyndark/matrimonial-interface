@@ -1,0 +1,8 @@
+h1 {
+    font-size: 24px;
+}
+
+.imageContainer {
+    display: flex;
+    flex-flow: column wrap;
+  }

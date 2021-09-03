@@ -1,0 +1,17 @@
+<%= stylesheet_link_tag "style_Index" %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Images</h1>
+
+<table>
+  <tbody>
+    <% @images.each do |image| %>
+    <%= link_to image_tag(image.file.variant(resize_to_limit: [nil, 150])), image %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Image', new_image_path %>
