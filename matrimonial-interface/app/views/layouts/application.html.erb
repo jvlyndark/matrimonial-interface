@@ -10,7 +10,24 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+    <% if current_user %>
+    <br>
+    <br>
+    Logged in as <%= current_user.email %>.
+  <br>
+    <%= link_to "Log Out", logout_path %>
+  <% else %>
+    <br>
+    <br>
+    <%= link_to "Sign Up", signup_path %> 
+    or
+    <%= link_to "Log In", login_path %>
+  <% end %>
+  <br>
+  <br>
+  
   <body>
     <%= yield %>
   </body>
+
 </html>

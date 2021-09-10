@@ -1,5 +1,7 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
+  before_action :authorize, only: [:edit, :update, :destroy, :add]
+
 
   # GET /images
   # GET /images.json
@@ -15,6 +17,7 @@ class ImagesController < ApplicationController
   # GET /images/new
   def new
     @image = Image.new
+    @image = current_user.images.build
   end
 
   # GET /images/1/edit
@@ -24,17 +27,16 @@ class ImagesController < ApplicationController
   # POST /images
   # POST /images.json
   def create
-    @image = Image.new(image_params)
-
-    respond_to do |format|
-      if @image.save
-        format.html { redirect_to @image, notice: 'Image was successfully created.' }
-        format.json { render :show, status: :created, location: @image }
-      else
-        format.html { render :new }
-        format.json { render json: @image.errors, status: :unprocessable_entity }
+    @image = current_user.images.new(image_params)
+      respond_to do |format|
+        if @image.save
+          format.html { redirect_to @image, notice: 'Image was successfully created.' }
+          format.json { render :show, status: :created, location: @image }
+        else
+          format.html { render :new }
+          format.json { render json: @image.errors, status: :unprocessable_entity }
+        end
       end
-    end
   end
 
   # PATCH/PUT /images/1
@@ -61,6 +63,10 @@ class ImagesController < ApplicationController
     end
   end
 
+  def acceptable_file
+    return unless file.attached?
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_image
@@ -69,6 +75,6 @@ class ImagesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def image_params
-      params.require(:image).permit(:file, :title, :description)
+      params.require(:image).permit(:file, :title, :description, :user)
     end
 end

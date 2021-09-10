@@ -6,3 +6,9 @@ h1 {
     display: flex;
     flex-flow: column wrap;
   }
+
+  .user-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
