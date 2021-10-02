@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "images#index"
+  root "pages#index"
   resources :images
   resources :users
   resources :sessions
