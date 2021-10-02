@@ -20080,3 +20080,53 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 137ms (Views: 128.3ms | ActiveRecord: 0.0ms | Allocations: 39762)
 
 
+Started GET "/" for ::1 at 2021-10-02 14:56:24 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | Allocations: 4287)
+Completed 200 OK in 8ms (Views: 7.2ms | Allocations: 5097)
+
+
+Started GET "/about" for ::1 at 2021-10-02 14:56:27 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 4013)
+Completed 200 OK in 8ms (Views: 7.3ms | Allocations: 4499)
+
+
+Started GET "/about" for ::1 at 2021-10-02 14:58:01 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4674)
+Completed 200 OK in 11ms (Views: 10.2ms | Allocations: 6141)
+
+
+Started GET "/about" for ::1 at 2021-10-02 14:58:10 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4690)
+Completed 200 OK in 11ms (Views: 9.6ms | Allocations: 6153)
+
+
+Started GET "/about" for ::1 at 2021-10-02 15:12:52 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 4681)
+Completed 200 OK in 19ms (Views: 17.7ms | Allocations: 6045)
+
+
