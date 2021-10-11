@@ -23516,3 +23516,334 @@ Started GET "/profiles/..." for ::1 at 2021-10-11 15:35:06 -0400
   
 ActionController::RoutingError (No route matches [GET] "/profiles/..."):
   
+Started GET "/" for ::1 at 2021-10-11 15:36:41 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 160)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 5409)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms | Allocations: 6621)
+
+
+Started GET "/profiles" for ::1 at 2021-10-11 15:36:43 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  Rendered profiles/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1428)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 33.1ms | Allocations: 6412)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.1ms | Allocations: 6937)
+
+
+Started GET "/..." for ::1 at 2021-10-11 15:36:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/..."):
+  
+Started GET "/profiles" for ::1 at 2021-10-11 15:39:03 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  Rendered profiles/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1791)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 247)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 7822)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.1ms | Allocations: 9162)
+
+
+Started GET "/profiles" for ::1 at 2021-10-11 15:51:11 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/profiles/index.html.erb:7
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/profiles/index.html.erb:11
+  Rendered profiles/index.html.erb within layouts/application (Duration: 33.2ms | Allocations: 16859)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 16936)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.6ms | Allocations: 18289)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User id: 1, email: "jvlyndark@gmail.com", password_digest: [FILTERED], created_at: "2021-01-17 05:13:45.778113000 +0000", updated_at: "2021-01-17 05:13:45.778113000 +0000">):
+     8:   <div class="card" style="width: 18rem;">
+     9:     <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="card-img-top" alt="...">
+    10:     <div class="card-body">
+    11:       <h5 class="card-title"><%= profile.user.name %></h5>
+    12:       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    13:       <%= link_to "View", profile, class: "btn btn-primary" %>
+    14:       <a href="#" class="btn btn-primary">Go somewhere</a>
+  
+app/views/profiles/index.html.erb:11
+app/views/profiles/index.html.erb:7
+Started GET "/profiles" for ::1 at 2021-10-11 15:51:27 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  Rendered profiles/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 4358)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 4432)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms | Allocations: 5784)
+
+
+  
+ActionView::Template::Error (undefined method `User' for #<Profile id: 1, name: "name", created_at: "2021-10-02 21:31:05.387637000 +0000", updated_at: "2021-10-02 21:31:05.387637000 +0000", user_id: 1>
+Did you mean?  user=):
+     8:   <div class="card" style="width: 18rem;">
+     9:     <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="card-img-top" alt="...">
+    10:     <div class="card-body">
+    11:       <h5 class="card-title"><%= profile.User.name %></h5>
+    12:       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    13:       <%= link_to "View", profile, class: "btn btn-primary" %>
+    14:       <a href="#" class="btn btn-primary">Go somewhere</a>
+  
+app/views/profiles/index.html.erb:11
+app/views/profiles/index.html.erb:7
+Started GET "/profiles" for ::1 at 2021-10-11 15:51:37 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  Rendered profiles/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 3030)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 3104)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms | Allocations: 4460)
+
+
+  
+ActionView::Template::Error (undefined method `name' for 1:Integer):
+     8:   <div class="card" style="width: 18rem;">
+     9:     <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="card-img-top" alt="...">
+    10:     <div class="card-body">
+    11:       <h5 class="card-title"><%= profile.user_id.name %></h5>
+    12:       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    13:       <%= link_to "View", profile, class: "btn btn-primary" %>
+    14:       <a href="#" class="btn btn-primary">Go somewhere</a>
+  
+app/views/profiles/index.html.erb:11
+app/views/profiles/index.html.erb:7
+Started GET "/profiles" for ::1 at 2021-10-11 15:51:46 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  Rendered profiles/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1790)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 247)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 7821)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.1ms | Allocations: 9222)
+
+
+Started GET "/profiles" for ::1 at 2021-10-11 15:52:22 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/profiles/index.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/profiles/index.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/profiles/index.html.erb:11
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/profiles/index.html.erb:11
+  Rendered profiles/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 4792)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 247)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 10808)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.2ms | Allocations: 12200)
+
+
+Started GET "/profiles" for ::1 at 2021-10-11 15:56:12 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  Rendered profiles/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1795)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.5ms | Allocations: 247)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 7826)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.1ms | Allocations: 9218)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-11 15:56:15 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 217)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 5193)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.2ms | Allocations: 6423)
+
+
+Started GET "/profiles" for ::1 at 2021-10-11 15:56:18 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  Rendered profiles/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1266)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 6242)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.1ms | Allocations: 6705)
+
+
+Started GET "/profiles/2" for ::1 at 2021-10-11 15:56:20 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 5069)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.1ms | Allocations: 6073)
+
+
+Started GET "/profiles" for ::1 at 2021-10-11 15:56:22 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  Rendered profiles/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1266)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 10.0ms | Allocations: 6245)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.1ms | Allocations: 6705)
+
+
+Started GET "/profiles" for ::1 at 2021-10-11 15:56:28 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  Rendered profiles/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 1790)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 247)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 7809)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.1ms | Allocations: 9152)
+
+
+Started GET "/profiles/2" for ::1 at 2021-10-11 15:56:30 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 216)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 5192)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.1ms | Allocations: 6403)
+
+
+Started GET "/profiles" for ::1 at 2021-10-11 15:56:33 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  Rendered profiles/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1268)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 6256)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 6719)
+
+
+Started GET "/signup" for ::1 at 2021-10-11 16:24:10 -0400
+Processing by UsersController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1359)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 99)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 31.3ms | Allocations: 6548)
+Completed 200 OK in 43ms (Views: 32.7ms | ActiveRecord: 0.3ms | Allocations: 12310)
+
+
+Started GET "/signup" for ::1 at 2021-10-11 16:42:20 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1274)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.7ms | Allocations: 247)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 7272)
+Completed 200 OK in 16ms (Views: 15.0ms | Allocations: 8677)
+
+
+Started GET "/signup" for ::1 at 2021-10-11 16:42:52 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 768)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 5744)
+Completed 200 OK in 9ms (Views: 8.8ms | Allocations: 6254)
+
+
+Started GET "/signup" for ::1 at 2021-10-11 16:42:54 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 768)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.1ms | Allocations: 90)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 5732)
+Completed 200 OK in 10ms (Views: 9.8ms | Allocations: 6186)
+
+
+Started GET "/signup" for ::1 at 2021-10-11 16:43:06 -0400
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1266)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 247)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 7264)
+Completed 200 OK in 12ms (Views: 11.2ms | Allocations: 8601)
+
+
