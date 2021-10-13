@@ -28901,3 +28901,873 @@ Did you mean?  provide):
   
 app/views/layouts/_navigation.html.erb:16
 app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2021-10-13 09:36:09 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendered layouts/_navigation.html.erb (Duration: 8.9ms | Allocations: 5724)
+  Rendered layout layouts/application.html.erb (Duration: 22.5ms | Allocations: 10515)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.4ms | Allocations: 10981)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `profile' for #<ActionView::Base:0x0000000003a458>
+Did you mean?  provide):
+    13:             </li>
+    14:           <% if logged_in? %>
+    15:             <li class="nav-item">
+    16:               <%= link_to current_user.email, profile_path(profile.find(user.id)), class: "nav-link", method: :delete %>
+    17:             </li>
+    18:             <li class="nav-item">
+    19:               <%= link_to 'Logout', logout_path, class: "nav-link", method: :delete %>
+  
+app/views/layouts/_navigation.html.erb:16
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2021-10-13 09:37:01 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendered layouts/_navigation.html.erb (Duration: 6.8ms | Allocations: 2580)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 8068)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.1ms | Allocations: 9351)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    13:             </li>
+    14:           <% if logged_in? %>
+    15:             <li class="nav-item">
+    16:               <%= link_to current_user.email, profile_path(@profile.find(@user.id)), class: "nav-link", method: :delete %>
+    17:             </li>
+    18:             <li class="nav-item">
+    19:               <%= link_to 'Logout', logout_path, class: "nav-link", method: :delete %>
+  
+app/views/layouts/_navigation.html.erb:16
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2021-10-13 09:37:16 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendered layouts/_navigation.html.erb (Duration: 10.8ms | Allocations: 5442)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 10930)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.1ms | Allocations: 12265)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x0000000003ac78>
+Did you mean?  super):
+    13:             </li>
+    14:           <% if logged_in? %>
+    15:             <li class="nav-item">
+    16:               <%= link_to current_user.email, profile_path(@profile.find(user.id)), class: "nav-link", method: :delete %>
+    17:             </li>
+    18:             <li class="nav-item">
+    19:               <%= link_to 'Logout', logout_path, class: "nav-link", method: :delete %>
+  
+app/views/layouts/_navigation.html.erb:16
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2021-10-13 09:37:38 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendered layouts/_navigation.html.erb (Duration: 6.8ms | Allocations: 2556)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 8044)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.1ms | Allocations: 9379)
+
+
+  
+ActionView::Template::Error (undefined method `find' for nil:NilClass):
+    13:             </li>
+    14:           <% if logged_in? %>
+    15:             <li class="nav-item">
+    16:               <%= link_to current_user.email, profile_path(@profile.find(current_user.id)), class: "nav-link", method: :delete %>
+    17:             </li>
+    18:             <li class="nav-item">
+    19:               <%= link_to 'Logout', logout_path, class: "nav-link", method: :delete %>
+  
+app/views/layouts/_navigation.html.erb:16
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2021-10-13 09:37:48 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 163)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.2ms | Allocations: 1276)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 6768)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 8111)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" id="logo" href="#">Navigation</a> -->
+        <%= link_to "M-I", root_path, class: "navbar-brand", id: "logo" %>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <%= link_to "Profiles", profiles_path, class: "nav-link" %>
+            </li>
+          <% if logged_in? %>
+            <li class="nav-item">
+              <%= link_to current_user.email, profile_path(@profile(current_user.id)), class: "nav-link", method: :delete %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Logout', logout_path, class: "nav-link", method: :delete %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to 'Log in', login_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'Sign up', signup_path, class: "nav-link" %>
+            </li>
+          <% end %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Dropdown
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+</nav>
+):
+1:    <nav>
+2:        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+3:          <div class="container-fluid">
+4:            <!-- <a class="navbar-brand" id="logo" href="#">Navigation</a> -->
+5:            <%= link_to "M-I", root_path, class: "navbar-brand", id: "logo" %>
+6:            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+7:              <span class="navbar-toggler-icon"></span>
+8:            </button>
+9:            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+10:              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+11:                <li class="nav-item">
+12:                  <%= link_to "Profiles", profiles_path, class: "nav-link" %>
+13:                </li>
+14:              <% if logged_in? %>
+15:                <li class="nav-item">
+16:                  <%= link_to current_user.email, profile_path(@profile(current_user.id)), class: "nav-link", method: :delete %>
+17:                </li>
+18:                <li class="nav-item">
+19:                  <%= link_to 'Logout', logout_path, class: "nav-link", method: :delete %>
+20:                </li>
+21:              <% else %>
+22:                <li class="nav-item">
+23:                  <%= link_to 'Log in', login_path, class: "nav-link" %>
+24:                </li>
+25:                <li class="nav-item">
+26:                  <%= link_to 'Sign up', signup_path, class: "nav-link" %>
+27:                </li>
+28:              <% end %>
+29:                <li class="nav-item dropdown">
+30:                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+31:                    Dropdown
+32:                  </a>
+33:                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+34:                    <li><a class="dropdown-item" href="#">Action</a></li>
+35:                    <li><a class="dropdown-item" href="#">Another action</a></li>
+36:                    <li><hr class="dropdown-divider"></li>
+37:                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+38:                  </ul>
+39:                </li>
+40:              </ul>
+41:              <form class="d-flex">
+42:                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+43:                <button class="btn btn-outline-success" type="submit">Search</button>
+44:              </form>
+45:            </div>
+46:          </div>
+47:        </nav>
+48:    </nav>
+  
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected ')', expecting `end'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected ',', expecting `end'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected ')', expecting `end'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected ',', expecting `end'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected ')', expecting `end'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected ',', expecting `end'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected ')', expecting `end'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected ',', expecting `end'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected ')', expecting `end'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected ',', expecting `end'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected '(', expecting ')'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected ')', expecting `end'
+app/views/layouts/_navigation.html.erb:16: syntax error, unexpected ',', expecting `end'
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2021-10-13 09:40:17 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendered layouts/_navigation.html.erb (Duration: 8.6ms | Allocations: 5148)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 10636)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.1ms | Allocations: 11971)
+
+
+  
+ActionView::Template::Error (undefined method `profile' for #<ActionView::Base:0x0000000003bd08>
+Did you mean?  provide):
+    13:             </li>
+    14:           <% if logged_in? %>
+    15:             <li class="nav-item">
+    16:               <%= link_to current_user.email, profile_path(profile(current_user.id)), class: "nav-link", method: :delete %>
+    17:             </li>
+    18:             <li class="nav-item">
+    19:               <%= link_to 'Logout', logout_path, class: "nav-link", method: :delete %>
+  
+app/views/layouts/_navigation.html.erb:16
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2021-10-13 09:42:12 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendered layouts/_navigation.html.erb (Duration: 15.7ms | Allocations: 10109)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 15141)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.8ms | Allocations: 15883)
+
+
+  
+ActionView::Template::Error (undefined method `profile' for #<ActionView::Base:0x0000000003de78>
+Did you mean?  provide):
+    13:             </li>
+    14:           <% if logged_in? %>
+    15:             <li class="nav-item">
+    16:               <%= link_to current_user.email, profile_path(profile(current_user.id)), class: "nav-link", method: :delete %>
+    17:             </li>
+    18:             <li class="nav-item">
+    19:               <%= link_to 'Logout', logout_path, class: "nav-link", method: :delete %>
+  
+app/views/layouts/_navigation.html.erb:16
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2021-10-13 09:43:17 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 162)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  Rendered layouts/_navigation.html.erb (Duration: 15.8ms | Allocations: 11143)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 16623)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.9ms | Allocations: 18061)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `id' for #<ActionView::Base:0x0000000003ff98>
+Did you mean?  @@id):
+    13:             </li>
+    14:           <% if logged_in? %>
+    15:             <li class="nav-item">
+    16:               <%= link_to current_user.email, profile_path(current_user_profile), class: "nav-link", method: :delete %>
+    17:             </li>
+    18:             <li class="nav-item">
+    19:               <%= link_to 'Logout', logout_path, class: "nav-link", method: :delete %>
+  
+app/helpers/application_helper.rb:8:in `current_user_profile'
+app/views/layouts/_navigation.html.erb:16
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2021-10-13 09:43:30 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 24.1ms | Allocations: 12756)
+  Rendered layout layouts/application.html.erb (Duration: 31.8ms | Allocations: 17809)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.3ms | Allocations: 18551)
+
+
+  
+ActionView::Template::Error (undefined method `empty?' for true:TrueClass):
+    13:             </li>
+    14:           <% if logged_in? %>
+    15:             <li class="nav-item">
+    16:               <%= link_to current_user.email, profile_path(current_user_profile), class: "nav-link", method: :delete %>
+    17:             </li>
+    18:             <li class="nav-item">
+    19:               <%= link_to 'Logout', logout_path, class: "nav-link", method: :delete %>
+  
+app/views/layouts/_navigation.html.erb:16
+app/views/layouts/application.html.erb:15
+Started GET "/" for ::1 at 2021-10-13 09:44:42 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 19.6ms | Allocations: 11460)
+  Rendered layouts/_footer.html.erb (Duration: 2.0ms | Allocations: 133)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 16847)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 1.4ms | Allocations: 17629)
+
+
+Started GET "/profiles/4" for ::1 at 2021-10-13 09:44:48 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 305)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 3.6ms | Allocations: 1585)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 6970)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 0.3ms | Allocations: 8903)
+
+
+Started GET "/" for ::1 at 2021-10-13 09:44:56 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 3.8ms | Allocations: 1478)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 6365)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.3ms | Allocations: 6865)
+
+
+Started GET "/profiles/4" for ::1 at 2021-10-13 09:44:58 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 2.6ms | Allocations: 1462)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 6392)
+Completed 200 OK in 12ms (Views: 9.8ms | ActiveRecord: 0.3ms | Allocations: 7410)
+
+
+Started GET "/logout" for ::1 at 2021-10-13 09:44:59 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Redirected to 
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 879)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/sessions_controller.rb:19:in `destroy'
+Started GET "/logout" for ::1 at 2021-10-13 09:45:29 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (Allocations: 416)
+
+
+Started GET "/" for ::1 at 2021-10-13 09:45:29 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 198)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 5351)
+Completed 200 OK in 9ms (Views: 8.6ms | Allocations: 6129)
+
+
+Started GET "/login" for ::1 at 2021-10-13 09:45:31 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 613)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 162)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 5826)
+Completed 200 OK in 14ms (Views: 12.9ms | Allocations: 6992)
+
+
+Started POST "/sessions" for ::1 at 2021-10-13 09:45:37 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"123@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 210ms (ActiveRecord: 1.0ms | Allocations: 6306)
+
+
+Started GET "/" for ::1 at 2021-10-13 09:45:37 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 43)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 9.7ms | Allocations: 6219)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered layout layouts/application.html.erb (Duration: 16.7ms | Allocations: 11256)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.6ms | Allocations: 11808)
+
+
+Started GET "/logout" for ::1 at 2021-10-13 09:45:41 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 350)
+
+
+Started GET "/" for ::1 at 2021-10-13 09:45:41 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 154)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 5165)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 5644)
+
+
+Started GET "/profiles" for ::1 at 2021-10-13 09:48:09 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  Rendered profiles/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1905)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 159)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 7099)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.2ms | Allocations: 8117)
+
+
+Started GET "/" for ::1 at 2021-10-13 09:48:27 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 154)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 5041)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms | Allocations: 5532)
+
+
+Started GET "/" for ::1 at 2021-10-13 13:09:13 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 154)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 5045)
+Completed 200 OK in 17ms (Views: 16.8ms | Allocations: 5486)
+
+
+Started GET "/" for ::1 at 2021-10-13 13:10:57 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 164)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.7ms | Allocations: 482)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 6270)
+Completed 200 OK in 14ms (Views: 13.4ms | Allocations: 7627)
+
+
+Started GET "/login" for ::1 at 2021-10-13 13:10:59 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 609)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.2ms | Allocations: 162)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 5818)
+Completed 200 OK in 11ms (Views: 10.6ms | Allocations: 6938)
+
+
+Started POST "/sessions" for ::1 at 2021-10-13 13:11:05 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"123@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 196ms (ActiveRecord: 0.5ms | Allocations: 1700)
+
+
+Started GET "/" for ::1 at 2021-10-13 13:11:05 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 40)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 2.3ms | Allocations: 1532)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 6419)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.2ms | Allocations: 6888)
+
+
+Started GET "/profiles/4" for ::1 at 2021-10-13 13:11:08 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 301)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/helpers/application_helper.rb:8:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 3.1ms | Allocations: 1580)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 6957)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.3ms | Allocations: 8619)
+
+
+Started GET "/profiles/4" for ::1 at 2021-10-13 13:15:17 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 9.5ms | Allocations: 5564)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 10793)
+Completed 200 OK in 29ms (Views: 17.4ms | ActiveRecord: 1.5ms | Allocations: 17948)
+
+
+Started GET "/profiles" for ::1 at 2021-10-13 13:15:19 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.2ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  Rendered profiles/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1733)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 3.0ms | Allocations: 1463)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 8165)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.4ms | Allocations: 8850)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-13 13:15:24 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 3.3ms | Allocations: 1467)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 6397)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.3ms | Allocations: 7407)
+
+
+Started GET "/profiles/1/edit" for ::1 at 2021-10-13 13:15:25 -0400
+Processing by ProfilesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/edit.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (Duration: 2.7ms | Allocations: 1566)
+  Rendered profiles/edit.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1958)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 2.8ms | Allocations: 1465)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 8257)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 9390)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-13 13:15:26 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 3.0ms | Allocations: 1467)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 6400)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.3ms | Allocations: 7405)
+
+
+Started GET "/profiles" for ::1 at 2021-10-13 13:15:27 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  Rendered profiles/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1268)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 3.2ms | Allocations: 1463)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 7581)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.3ms | Allocations: 8043)
+
+
+Started GET "/profiles/2" for ::1 at 2021-10-13 13:15:28 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 3.3ms | Allocations: 1467)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 6397)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.3ms | Allocations: 7402)
+
+
+Started GET "/profiles/2/edit" for ::1 at 2021-10-13 13:15:29 -0400
+Processing by ProfilesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/edit.html.erb within layouts/application
+  Rendered profiles/_form.html.erb (Duration: 1.7ms | Allocations: 1081)
+  Rendered profiles/edit.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1223)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 3.1ms | Allocations: 1465)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 7526)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.3ms | Allocations: 8532)
+
+
+Started GET "/profiles/2" for ::1 at 2021-10-13 13:15:31 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 84)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 3.0ms | Allocations: 1466)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 6396)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 7402)
+
+
+Started GET "/profiles/2" for ::1 at 2021-10-13 13:18:11 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:67:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  Rendered profiles/show.html.erb within layouts/application (Duration: 0.3ms | Allocations: 159)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 10.6ms | Allocations: 5564)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 44)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 10793)
+Completed 200 OK in 33ms (Views: 19.5ms | ActiveRecord: 2.0ms | Allocations: 17946)
+
+
+Started GET "/logout" for ::1 at 2021-10-13 13:18:13 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 403)
+
+
+Started GET "/" for ::1 at 2021-10-13 13:18:13 -0400
+Processing by PagesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 59)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.6ms | Allocations: 196)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 5345)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms | Allocations: 6134)
+
+
+Started GET "/login" for ::1 at 2021-10-13 13:18:14 -0400
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 410)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 161)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 5622)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.0ms | Allocations: 6364)
+
+
+Started POST "/sessions" for ::1 at 2021-10-13 13:18:19 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"123@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log In"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "123@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 202ms (ActiveRecord: 0.2ms | Allocations: 1311)
+
+
+Started GET "/" for ::1 at 2021-10-13 13:18:19 -0400
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+Redirected to http://localhost:3000/profiles
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms | Allocations: 838)
+
+
+Started GET "/profiles" for ::1 at 2021-10-13 13:18:19 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/index.html.erb:7
+  Rendered profiles/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1399)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 2.7ms | Allocations: 1465)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 7710)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.3ms | Allocations: 8198)
+
+
