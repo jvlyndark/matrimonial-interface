@@ -5,7 +5,8 @@
     <div class="card-body">
       <%= @profile.name %>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <%= link_to "Edit", edit_profile_path(@profile), class: "btn btn-primary" %>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <% if logged_in? && current_user_profile.user_id == current_user.id %>
+        <%= link_to "Edit", edit_profile_path(@profile), class: "btn btn-primary" %>
+      <% end %>
     </div>
   </div>
