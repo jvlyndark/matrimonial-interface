@@ -31836,3 +31836,731 @@ Processing by ProfilesController#index as HTML
 Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.3ms | Allocations: 8870)
 
 
+Started GET "/profiles" for ::1 at 2021-10-14 13:20:38 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/profiles/_profile.html.erb:1
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/_profile.html.erb:1
+  Rendered profiles/_profile.html.erb (Duration: 3.4ms | Allocations: 1849)
+  Rendered profiles/index.html.erb within layouts/application (Duration: 5.0ms | Allocations: 2612)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 3.0ms | Allocations: 1539)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 9001)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.6ms | Allocations: 9461)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:20:59 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1307)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 217)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 6371)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.3ms | Allocations: 7381)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:22:51 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1619)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.7ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 7845)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.3ms | Allocations: 9768)
+
+
+Started GET "/profiles" for ::1 at 2021-10-14 13:22:53 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/_profile_card.html.erb:1
+  Rendered profiles/_profile_card.html.erb (Duration: 2.6ms | Allocations: 1247)
+  Rendered profiles/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2400)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 3.5ms | Allocations: 1503)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 8753)
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.3ms | Allocations: 9394)
+
+
+Started GET "/profiles" for ::1 at 2021-10-14 13:23:25 -0400
+Processing by ProfilesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/index.html.erb within layouts/application
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles"[0m
+  ↳ app/views/profiles/_profile_card.html.erb:1
+  Rendered profiles/_profile_card.html.erb (Duration: 2.6ms | Allocations: 1383)
+  Rendered profiles/index.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2574)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered layouts/_navigation.html.erb (Duration: 4.2ms | Allocations: 1881)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 10053)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.3ms | Allocations: 11396)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:23:27 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1490)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 217)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 6554)
+Completed 200 OK in 14ms (Views: 11.6ms | ActiveRecord: 0.3ms | Allocations: 7740)
+
+
+Started GET "/profiles/..." for ::1 at 2021-10-14 13:23:27 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/profiles/..."):
+  
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:24:31 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1639)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7858)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.3ms | Allocations: 9735)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:25:38 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1644)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 7863)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.3ms | Allocations: 9800)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:28:28 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 7866)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.3ms | Allocations: 9803)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:28:40 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 7867)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.3ms | Allocations: 9804)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:29:03 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 7866)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.3ms | Allocations: 9803)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:29:42 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7870)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.3ms | Allocations: 9808)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:29:58 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 610)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 111)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 7873)
+Completed 200 OK in 23ms (Views: 20.5ms | ActiveRecord: 0.3ms | Allocations: 9811)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:31:18 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1648)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 7875)
+Completed 200 OK in 19ms (Views: 16.5ms | ActiveRecord: 0.3ms | Allocations: 9820)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:31:59 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7873)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.3ms | Allocations: 9811)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:33:43 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 7868)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.3ms | Allocations: 9809)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:33:58 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7866)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.3ms | Allocations: 9803)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:34:04 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1307)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.3ms | Allocations: 217)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 6371)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.3ms | Allocations: 7430)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:34:13 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 7866)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.3ms | Allocations: 9749)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:36:39 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 7866)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.3ms | Allocations: 9804)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:36:46 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1307)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.4ms | Allocations: 217)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 6371)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.3ms | Allocations: 7430)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:37:28 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 7866)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 9749)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:37:42 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7866)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 9803)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:38:02 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 7866)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.3ms | Allocations: 9803)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:38:13 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7866)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 9803)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:38:37 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 4.7ms | Allocations: 607)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 115)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 7877)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.3ms | Allocations: 9815)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:38:46 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1648)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.2ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 7875)
+Completed 200 OK in 19ms (Views: 16.0ms | ActiveRecord: 0.3ms | Allocations: 9820)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:38:53 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 7868)
+Completed 200 OK in 19ms (Views: 15.9ms | ActiveRecord: 0.3ms | Allocations: 9806)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:39:04 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 7868)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.3ms | Allocations: 9809)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:40:02 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 7866)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 0.3ms | Allocations: 9803)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:40:12 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 7866)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.3ms | Allocations: 9803)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:40:28 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.8ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 7866)
+Completed 200 OK in 15ms (Views: 12.4ms | ActiveRecord: 0.2ms | Allocations: 9803)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:40:41 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 7866)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.3ms | Allocations: 9804)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:41:03 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 7866)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.3ms | Allocations: 9803)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:41:23 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.1ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7866)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 9803)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:41:36 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | Allocations: 7866)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.3ms | Allocations: 9803)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:41:57 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1647)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 0.9ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 7866)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.3ms | Allocations: 9803)
+
+
+Started GET "/profiles/1" for ::1 at 2021-10-14 13:42:14 -0400
+Processing by ProfilesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/profiles_controller.rb:68:in `set_profile'
+  Rendering layout layouts/application.html.erb
+  Rendering profiles/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:4:in `current_user'
+  [1m[36mProfile Load (0.1ms)[0m  [1m[34mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:14:in `current_user_profile'
+  Rendered profiles/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1650)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_navigation.html.erb (Duration: 1.0ms | Allocations: 606)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 7880)
+Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 0.3ms | Allocations: 9818)
+
+
