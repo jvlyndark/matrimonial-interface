@@ -35,6 +35,11 @@
       <p class="card-text">Gender: <%= @profile.gender %></p>
       <p class="card-text">Location: <%= @profile.location %></p>
       <p class="card-text">User ID: <%= @profile.user_id %></p>
+      <p class="card-text">Job: <%= @profile.job %></p>
+      <p class="card-text">Salary: <%= @profile.salary %></p>
+      <p class="card-text">Religion: <%= @profile.religion %></p>
+      <p class="card-text">About Me: <%= @profile.about %></p>
+      <p class="card-text">Interests: <%= @profile.interests %></p>
       
       <% if logged_in? && current_user_profile.user_id == current_user.id %>
         <%= link_to "Edit", edit_profile_path(@profile), class: "btn btn-primary" %>
