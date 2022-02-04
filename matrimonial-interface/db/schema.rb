@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_22_171231) do
+ActiveRecord::Schema.define(version: 2022_02_01_182535) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -61,6 +61,11 @@ ActiveRecord::Schema.define(version: 2021_10_22_171231) do
     t.string "religion"
     t.string "about"
     t.string "interests"
+    t.integer "cultureScore"
+    t.integer "facialScore"
+    t.integer "lifestyleScore"
+    t.integer "kundaliScore"
+    t.integer "locationScore"
   end
 
   create_table "user_profiles", force: :cascade do |t|

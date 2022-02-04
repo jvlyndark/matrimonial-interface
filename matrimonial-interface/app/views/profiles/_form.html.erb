@@ -32,29 +32,31 @@
   </div>
 
   <div class="field">
-    <%= form.label :job %>
-    <%= form.text_field :job %>
+    <%= form.label :cultureScore %>
+    <%= form.text_field :cultureScore %>
   </div>
 
   <div class="field">
-    <%= form.label :salary %>
-    <%= form.number_field :salary %>
+    <%= form.label :facialScore %>
+    <%= form.text_field :facialScore %>
   </div>
 
   <div class="field">
-    <%= form.label :religion %>
-    <%= form.text_field :religion %>
+    <%= form.label :lifestyleScore %>
+    <%= form.text_field :lifestyleScore %>
   </div>
 
   <div class="field">
-    <%= form.label :about %>
-    <%= form.text_field :about %>
+    <%= form.label :kundaliScore %>
+    <%= form.text_field :kundaliScore %>
   </div>
 
   <div class="field">
-    <%= form.label :interests %>
-    <%= form.text_field :interests %>
+    <%= form.label :locationScore %>
+    <%= form.text_field :locationScore %>
   </div>
+
+<%= form.hidden_field :user_id, value: current_user.id %>
 
   <div class="actions">
     <%= form.submit %>

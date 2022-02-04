@@ -57,7 +57,35 @@
     <br>
   </div>
 </div>
+<br>
+<br>
+<table>
+  <tr>
+    <th>Name</th> 
+    <th><%= link_to "Culture Score", :sort => "cultureScore"%> </th>  
+    <th><%= link_to "FR Score", :sort => "facialScore"%> </th>
+    <th><%= link_to "Lifestyle Score", :sort => "lifestyleScore"%> </th>
+    <th><%= link_to "Kundali Score", :sort => "kundaliScore"%> </th>
+    <th><%= link_to "Location Score", :sort => "locationScore"%> </th>   
+  </tr>
+ <% @profiles.each do |profile| %>
+  <tr>
+    <td><%=profile.name%></td>
+    <td><%=profile.cultureScore%></td>
+    <td><%=profile.facialScore%></td>
+    <td><%=profile.lifestyleScore%></td>
+    <td><%=profile.kundaliScore%></td>
+    <td><%=profile.locationScore%></td>
+  </tr>
+  <% end %>
+ </table>
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <table>
   <thead>

@@ -4,7 +4,7 @@ class User < ApplicationRecord
 
     has_secure_password
     validates :email, presence: true, uniqueness: { case_sensitive: false }, format: {with: VALID_EMAIL_REGEX}
-    has_one :profile
+    has_many :profile
     has_many :images
     after_create :build_profile
 

@@ -3,8 +3,11 @@ class ProfilesController < ApplicationController
 
   # GET /profiles
   # GET /profiles.json
-  def index
-    @profiles = Profile.all
+  # def index
+  #   @profiles = Profile.all
+  # end
+  def index 
+    @profiles = Profile.order(params[:sort]).reverse
   end
 
   # GET /profiles/1
@@ -26,7 +29,7 @@ class ProfilesController < ApplicationController
   def create
     @profile = Profile.new(profile_params)
     @profile.user = current_user
-    @profile.user_id = current_user.id
+    @profile.user_id = @profile.id
     respond_to do |format|
       if @profile.save
         format.html { redirect_to @profile, notice: 'Profile was successfully created.' }
@@ -41,7 +44,7 @@ class ProfilesController < ApplicationController
   # PATCH/PUT /profiles/1
   # PATCH/PUT /profiles/1.json
   def update
-    @profile.user_id = current_user.id
+    @profile.user_id = @profile.id
     respond_to do |format|
       if @profile.update(profile_params)
         format.html { redirect_to @profile, notice: 'Profile was successfully updated.' }
@@ -71,6 +74,6 @@ class ProfilesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def profile_params
-      params.require(:profile).permit(:name, :age, :gender, :location, :job, :salary, :religion, :about, :interests)
+      params.require(:profile).permit(:name, :age, :gender, :location, :cultureScore, :facialScore, :lifestyleScore, :kundaliScore, :locationScore)
     end
 end

@@ -1,5 +1,5 @@
 <% @profiles.each do |profile| %>
-  <div class="card" style="width: 80vw; height: 15vh; margin: 0;">
+  <div class="card" style="width: 80vw; height: 10vh; margin: 0;">
     <%
 =begin%>
  <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="card-img-top" alt="..." style="height: 20rem; width: 5wh;"> 
@@ -9,7 +9,11 @@
       <h5 class="card-title" style="margin: 0;"><%= profile.name %></h5>
       <p class="card-text" style="margin: 0;">Age: <%= profile.age %></p>
       <p class="card-text" style="margin: 0;">Location: <%= profile.location %></p>
-      <%= link_to "View", profile, class: "btn btn-primary" %>
+      <%
+=begin%>
+ <%= link_to "View", profile, class: "btn btn-primary" %> 
+<%
+=end%>
     </div>
   </div>
 <% end %>
