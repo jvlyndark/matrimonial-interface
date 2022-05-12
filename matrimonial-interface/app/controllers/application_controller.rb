@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
         @admin_user ||= User.first
     end 
 
-    helper_method :current_user, :current_user_profile, :logged_in?, :admin_user
+    helper_method :current_user, :current_user_profile, :logged_in?, :admin_user, :sort_profiles_by_attribute
 
     def authorize
         redirect_to login_url, alert: "Not authorized" if current_user.nil?
@@ -24,5 +24,9 @@ class ApplicationController < ActionController::Base
 
     def create_profile_path
         redirect_to new_profile_path
+    end
+
+    def sort_profiles_by_attribute(a:)
+        profiles.sort_by {|prof| prof.a}
     end
 end

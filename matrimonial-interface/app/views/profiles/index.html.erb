@@ -35,36 +35,6 @@
                 </tr>
             </tbody>
         </table>
-
-        <table id="proportions-table2">
-            <tbody>
-                <tr>
-                    <td>
-                        <var>23%</var>
-                    </td>
-                    <td>
-                        <var>12%</var>
-                    </td>
-                    <td>
-                        <var>16%</var>
-                    </td>
-                    <td>
-                        <var>34%</var>
-                    </td>
-                    <td>
-                        <var>15%</var>
-                    </td>
-                </tr>
-                <br>
-                <tr>
-                    <th>Culture</th>
-                    <th>FR</th>
-                    <th>Lifestyle</th>
-                    <th>Kundali</th>
-                    <th>Location</th>
-                </tr>
-            </tbody>
-        </table>
     </div>
 
 <h1>Profiles</h1>
@@ -72,12 +42,16 @@
 <div class="container mx-auto">
   <div class="card mx-auto">
     <br>
+
+    <span id="pieSortSpan"><% pieSort(3, 1, 1, 1, 1) %></span>
     <%= render 'profile_card_wide' %>
     <br>
   </div>
 </div>
 <br>
 <br>
+
+<h1>Table</h1>
 <table>
   <tr>
     <th>Name</th> 
@@ -147,20 +121,6 @@
             background-color: aqua;
         }
 
-        /* .adjust-button {
-            width: 20px;
-            height: 20px;
-            font-size: 20px;
-            line-height: 20px;
-            text-align: center;
-            display: inline-block;
-            border: 1px solid grey;
-            border-radius: 5px;
-            margin: 1px;
-            font-family: Arial, sans-serif;
-            cursor: pointer;
-        } */
-
         td {
             width: 150px;
         }
@@ -192,12 +152,10 @@
                 let labelsArray = ['Culture', 'Facial Recognition', 'Lifestyle', 'Kundali', 'Location'];
                 var dimensions = labelsArray;
                 let colorsArray = ['#ff99ee', '#11aaff', '#ffff00', '#00ff99', '#bb00ee'];
-                // var randomProportions = generateRandomProportions(dimensions.length, 0.05);
                 var equalProportions = 20;
                 var proportions = dimensions.map(function (d, i) {
                     return {
                         label: d,
-                        // proportion: randomProportions[i],
                         proportion: equalProportions,
                         collapsed: false,
                         format: {
@@ -252,43 +210,59 @@
                 function onPieChartChange(piechart) {
 
                     var table = document.getElementById('proportions-table');
+                    var table2 = document.getElementById('proportions-table2');
                     var percentages = piechart.getAllSliceSizePercentages();
 
                     var labelsRow = '<tr>';
                     var propsRow = '<tr>';
                     for (var i = 0; i < proportions.length; i += 1) {
                         labelsRow += '<th>' + proportions[i].format.label + '</th>';
-
+                        
                         var v = '<var>' + percentages[i].toFixed(0) + '%</var>';
                         var plus = '<div id="plu-' + dimensions[i] + '" class="adjust-button" data-i="' + i + '" data-d="-1"></div>';
                         var minus = '<div id="min-' + dimensions[i] + '" class="adjust-button" data-i="' + i + '" data-d="1"></div>';
                         propsRow += '<td>' + v + plus + minus + '</td>';
+                        var updatePercent = percentages[i].toFixed(0);
+                        updateTable2(updatePercent);
                     }
+
+                    function updateTable2(v) {
+                        console.log(i, " ", v);
+                        var v = '<var>' + percentages[i].toFixed(0) + '%</var>';
+
+                        // var c = v;
+                        // if (c < 20) {
+                        //     var ps = '<span id="pieSortSpan"><%= pieSort(1, 1, 1, 1, 1) %> </span>';
+                        // } else if (c >= 20 && c < 40) {
+                        //     var ps = '<span id="pieSortSpan"><%= pieSort(2, 1, 1, 1, 1) %> </span>';
+                        // } else if (c >= 40 && c < 60) {
+                        //     var ps = '<span id="pieSortSpan"><%= pieSort(3, 1, 1, 1, 1) %> </span>';
+                        // } else if (c >= 60 && c < 80) {
+                        //     var ps = '<span id="pieSortSpan"><%= pieSort(4, 1, 1, 1, 1) %> </span>';
+                        // } else if (c >= 80 && c < 1000) {
+                        //     var ps = '<span id="pieSortSpan"><%= pieSort(5, 1, 1, 1, 1) %> </span>';
+                        // }
+                        
+                    }
+
+                    $('#pieSortSpan').html('<%escape_javascript(pieSort(3, 1, 1, 1, 1)) %>');
+
                     labelsRow += '</tr>';
                     propsRow += '</tr>';
-
                     table.innerHTML = labelsRow + propsRow;
-
                     var adjust = document.getElementsByClassName("adjust-button");
 
                     function adjustClick(e) {
                         var i = this.getAttribute('data-i');
                         var d = this.getAttribute('data-d');
-
                         piechart.moveAngle(i, (d * 0.1));
                     }
 
                     for (i = 0; i < adjust.length; i++) {
                         adjust[i].addEventListener('click', adjustClick);
                     }
-
                 }
             }
-
-            function updateTable2(v) {
-                
-            }
-
         })();
 
     </script>
